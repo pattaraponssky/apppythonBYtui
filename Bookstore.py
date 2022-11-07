@@ -9,6 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import pymysql
 
 
 class Ui_MainWindow(object):
@@ -64,6 +65,7 @@ class Ui_MainWindow(object):
         self.comboBox.setGeometry(QtCore.QRect(10, 70, 281, 29))
         self.comboBox.setStyleSheet("font: 12pt \"Nirmala UI\";")
         self.comboBox.setObjectName("comboBox")
+        self.ShowNameBook()
         self.label_6 = QtWidgets.QLabel(self.widget)
         self.label_6.setGeometry(QtCore.QRect(10, 20, 277, 32))
         self.label_6.setMinimumSize(QtCore.QSize(277, 30))
@@ -155,56 +157,9 @@ class Ui_MainWindow(object):
         self.label_12.setStyleSheet("font: 75 25pt \"MS Shell Dlg 2\";")
         self.label_12.setObjectName("label_12")
         self.horizontalLayout_2.addWidget(self.widget_4)
-        self.frameOrder = QtWidgets.QFrame(self.centralwidget)
-        self.frameOrder.setGeometry(QtCore.QRect(280, 110, 811, 423))
-        self.frameOrder.setMinimumSize(QtCore.QSize(811, 421))
-        self.frameOrder.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frameOrder.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frameOrder.setObjectName("frameOrder")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frameOrder)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.widget_10 = QtWidgets.QWidget(self.frameOrder)
-        self.widget_10.setStyleSheet("background-image: url(:/BG/W.png);")
-        self.widget_10.setObjectName("widget_10")
-        self.label_2 = QtWidgets.QLabel(self.widget_10)
-        self.label_2.setGeometry(QtCore.QRect(600, 40, 111, 41))
-        self.label_2.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
-"background-image: url(:/BG/W.png);")
-        self.label_2.setObjectName("label_2")
-        self.bookstorebutton_4 = QtWidgets.QPushButton(self.widget_10)
-        self.bookstorebutton_4.setGeometry(QtCore.QRect(560, 220, 191, 40))
-        self.bookstorebutton_4.setStyleSheet("background-image: url(:/BG/W.png);\n"
-"font: 16pt \"Nirmala UI\";")
-        self.bookstorebutton_4.setObjectName("bookstorebutton_4")
-        self.label_3 = QtWidgets.QLabel(self.widget_10)
-        self.label_3.setGeometry(QtCore.QRect(180, 20, 191, 41))
-        self.label_3.setStyleSheet("font: 75 16pt \"MS Shell Dlg 2\";\n"
-"")
-        self.label_3.setObjectName("label_3")
-        self.widget_3 = QtWidgets.QWidget(self.widget_10)
-        self.widget_3.setGeometry(QtCore.QRect(370, 210, 120, 80))
-        self.widget_3.setObjectName("widget_3")
-        self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.widget_10)
-        self.plainTextEdit_2.setGeometry(QtCore.QRect(30, 70, 491, 311))
-        self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.widget_10)
-        self.lineEdit_2.setGeometry(QtCore.QRect(560, 90, 151, 31))
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.label_8 = QtWidgets.QLabel(self.widget_10)
-        self.label_8.setGeometry(QtCore.QRect(720, 80, 51, 41))
-        self.label_8.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
-"background-image: url(:/BG/W.png);")
-        self.label_8.setObjectName("label_8")
-        self.bookstorebutton_5 = QtWidgets.QPushButton(self.widget_10)
-        self.bookstorebutton_5.setGeometry(QtCore.QRect(560, 270, 191, 40))
-        self.bookstorebutton_5.setStyleSheet("background-image: url(:/BG/W.png);\n"
-"font: 16pt \"Nirmala UI\";")
-        self.bookstorebutton_5.setObjectName("bookstorebutton_5")
-        self.horizontalLayout_4.addWidget(self.widget_10)
         self.frameBookstore.raise_()
         self.frameBookstore_3.raise_()
         self.frameBookstore_2.raise_()
-        self.frameOrder.raise_()
         self.textBrowser.raise_()
         self.bookstorebutton.raise_()
         self.orderButton.raise_()
@@ -234,7 +189,8 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuBookstore.menuAction())
         self.menubar.addAction(self.menuORDER.menuAction())
         self.menubar.addAction(self.menuAbout_Us.menuAction())
-
+        
+        
         self.retranslateUi(MainWindow)
         self.bookstorebutton.clicked.connect(self.frameBookstore.show) # type: ignore
         self.bookstorebutton_2.clicked.connect(self.frameBookstore_2.show) # type: ignore
@@ -245,15 +201,20 @@ class Ui_MainWindow(object):
         self.bookstorebutton.clicked.connect(self.frameBookstore_2.close) # type: ignore
         self.abouusButton.clicked.connect(self.frameBookstore.close) # type: ignore
         self.abouusButton.clicked.connect(self.frameBookstore_2.close) # type: ignore
-        self.orderButton.clicked.connect(self.frameOrder.show) # type: ignore
-        self.abouusButton.clicked.connect(self.frameOrder.close) # type: ignore
-        self.bookstorebutton.clicked.connect(self.frameOrder.close) # type: ignore
-        self.bookstorebutton_2.clicked.connect(self.frameOrder.close) # type: ignore
-        self.orderButton.clicked.connect(self.frameBookstore_2.close) # type: ignore
-        self.orderButton.clicked.connect(self.frameBookstore_3.close) # type: ignore
-        self.orderButton.clicked.connect(self.frameBookstore.close) # type: ignore
+        
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
+    def ShowNameBook(self) :
+                
+                
+                self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
+                self.cur = self.db.cursor()
+                self.cur.execute('SELECT * FROM book;')
+                data = self.cur.fetchall()
+                
+                for i in data:
+                        self.comboBox.addItem(i[0])
+                
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "โปรแกรมซื้อหนังสือ"))
@@ -276,11 +237,6 @@ class Ui_MainWindow(object):
         self.label_10.setText(_translate("MainWindow", " นายภัทรพล สมสกุล 116310400294-9"))
         self.label_11.setText(_translate("MainWindow", " นายกรกฤตย ก๋ำนารายณ์ 116310462007-0"))
         self.label_12.setText(_translate("MainWindow", "63146CPE2"))
-        self.label_2.setText(_translate("MainWindow", "  Total Price"))
-        self.bookstorebutton_4.setText(_translate("MainWindow", "Buy"))
-        self.label_3.setText(_translate("MainWindow", "     Order List"))
-        self.label_8.setText(_translate("MainWindow", " Bath"))
-        self.bookstorebutton_5.setText(_translate("MainWindow", "clear order"))
         self.menuHome.setTitle(_translate("MainWindow", "HOME"))
         self.menuAbout_Us.setTitle(_translate("MainWindow", "About Us"))
         self.menuBookstore.setTitle(_translate("MainWindow", "BOOKSTORE"))
@@ -298,3 +254,5 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
+    
+    

@@ -636,10 +636,10 @@ font: 16pt &quot;Nirmala UI&quot;;</string>
      </item>
     </layout>
    </widget>
-   <zorder>frameBookstore</zorder>
    <zorder>frameBookstore_3</zorder>
    <zorder>frameBookstore_2</zorder>
    <zorder>frameOrder</zorder>
+   <zorder>frameBookstore</zorder>
    <zorder>textBrowser</zorder>
    <zorder>bookstorebutton</zorder>
    <zorder>orderButton</zorder>
