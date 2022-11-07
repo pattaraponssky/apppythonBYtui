@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1130</width>
+    <height>635</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1130</width>
+    <height>635</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>โปรแกรมซื้อหนังสือ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/BG/bg.png);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>40</y>
+      <width>491</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>491</width>
+      <height>51</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>491</width>
+      <height>51</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/BG/W.png);</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.85455pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt; font-weight:600;&quot;&gt;PHOENIX DREAM BOOK&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bookstorebutton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>200</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/BG/W.png);
+font: 16pt &quot;Nirmala UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>BOOKSTORE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="orderButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>280</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/BG/W.png);
+font: 16pt &quot;Nirmala UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ORDER</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="abouusButton">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>360</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/BG/W.png);
+
+font: 75 16pt &quot;Nirmala UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ABout Us</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bookstorebutton_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>120</y>
+      <width>201</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/BG/W.png);
+font: 16pt &quot;Nirmala UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frameBookstore">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>110</y>
+      <width>811</width>
+      <height>423</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>811</width>
+      <height>421</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>297</width>
+         <height>401</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>297</width>
+         <height>401</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/BG/W.png);</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="minimumSize">
+           <size>
+            <width>277</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 16pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>           หมวดหนังสือ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_11">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>เบ็ตเตล็ดหรือความรู้ทั่วไป</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_10">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ปรัชญา</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ศาสนา</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_12">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>สังคมศาสตร์</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_9">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ภาษาศาสตร์</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>วิทยาศาสตร์</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>วิทยาศาสตร์ประยุกต์ หรือเทคโนโลยี</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ศิลปกรรมและการบันเทิง</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>วรรณคดี</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="styleSheet">
+           <string notr="true">
+font: 12pt &quot;Nirmala UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>ประวัติศาสตร์และภูมิศาสตร์</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/BG/W.png);</string>
+       </property>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>10</y>
+          <width>211</width>
+          <height>30</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;Nirmala UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string> รายละเอียดหนังสือ</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bookstorebutton_3">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>360</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/BG/W.png);
+font: 12pt &quot;Nirmala UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Add To Order</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>320</y>
+          <width>51</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>320</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>320</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>441</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;Nirmala UI&quot;;</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="frameBookstore_2">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>110</y>
+      <width>811</width>
+      <height>423</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>811</width>
+      <height>421</height>
+     </size>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QWidget" name="widget_5" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>297</width>
+         <height>401</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>297</width>
+         <height>401</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/BG/W.png);</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>300</y>
+          <width>201</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_7" native="true">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>250</width>
+          <height>250</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-image: url(:/logo/pream.png);</string>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_6" native="true">
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/BG/W.png);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>frameBookstore_2</zorder>
+   <zorder>frameBookstore</zorder>
+   <zorder>textBrowser</zorder>
+   <zorder>bookstorebutton</zorder>
+   <zorder>orderButton</zorder>
+   <zorder>abouusButton</zorder>
+   <zorder>bookstorebutton_2</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1130</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHome">
+    <property name="title">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuAbout_Us">
+    <property name="title">
+     <string>About Us</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuBookstore">
+    <property name="title">
+     <string>BOOKSTORE</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuORDER">
+    <property name="title">
+     <string>ORDER</string>
+    </property>
+   </widget>
+   <addaction name="menuHome"/>
+   <addaction name="menuBookstore"/>
+   <addaction name="menuORDER"/>
+   <addaction name="menuAbout_Us"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>รายการหนังสือ</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>รายการสั่งซื้อ</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Image.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>bookstorebutton</sender>
+   <signal>clicked()</signal>
+   <receiver>frameBookstore</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>257</x>
+     <y>244</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookstorebutton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>frameBookstore</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>251</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookstorebutton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>frameBookstore_2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>155</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bookstorebutton</sender>
+   <signal>clicked()</signal>
+   <receiver>frameBookstore_2</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>238</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
