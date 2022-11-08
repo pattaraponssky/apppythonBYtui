@@ -63,9 +63,18 @@ class Ui_MainWindow(object):
         self.comboBox = QtWidgets.QComboBox(self.widget)
         self.comboBox.setGeometry(QtCore.QRect(10, 70, 281, 29))
         self.comboBox.setStyleSheet("font: 12pt \"Nirmala UI\";")
+
+
+
+        
         self.comboBox.setObjectName("comboBox")
         self.ShowNameBook()
         self.comboBox.currentIndexChanged.connect(self.ShowDetail)
+        
+
+
+
+
         self.label_6 = QtWidgets.QLabel(self.widget)
         self.label_6.setGeometry(QtCore.QRect(10, 20, 277, 32))
         self.label_6.setMinimumSize(QtCore.QSize(277, 30))
@@ -99,6 +108,7 @@ class Ui_MainWindow(object):
         self.plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_2)
         self.plainTextEdit.setGeometry(QtCore.QRect(40, 50, 421, 231))
         self.plainTextEdit.setObjectName("plainTextEdit")
+
         self.horizontalLayout.addWidget(self.widget_2)
         self.frameBookstore_2 = QtWidgets.QFrame(self.centralwidget)
         self.frameBookstore_2.setGeometry(QtCore.QRect(280, 110, 811, 423))
@@ -256,19 +266,20 @@ class Ui_MainWindow(object):
         self.orderButton.clicked.connect(self.frameBookstore.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
+
+
+        
     def ShowDetail(self) :
                 self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
                 self.cur = self.db.cursor()
-                self.cur.execute('SELECT * FROM book;')
+                data = self.comboBox.currentText()
+                self.cur.execute(f'SELECT * FROM book WHERE name_book = "{data}";')
                 data = self.cur.fetchall()
                 self.plainTextEdit.clear()
-                
                 for i in data:
                         self.plainTextEdit.insertPlainText(i[1])  
         
     def ShowNameBook(self) :
-                
-                
                 self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
                 self.cur = self.db.cursor()
                 self.cur.execute('SELECT * FROM book;')
@@ -276,6 +287,8 @@ class Ui_MainWindow(object):
                 
                 for i in data:
                         self.comboBox.addItem(i[0])
+
+
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -316,6 +329,7 @@ import Image_rc
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

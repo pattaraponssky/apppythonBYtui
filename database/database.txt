@@ -1,0 +1,10 @@
+CREATE SCHEMA `bookstore` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `bookstore`.`book` (
+  `name_book` VARCHAR(50) NOT NULL,
+  `book_detail` VARCHAR(200) NULL,
+  `price` INT NOT NULL,
+  PRIMARY KEY (`name_book`));
+
+
+INSERT INTO bookstore.book (name_book,book_detail,price) VALUES ("Berserk","Berserk (Japanese: ベルセルク, Hepburn: Beruseruku) is a Japanese manga series written and illustrated by Kentaro Miura.",120);
