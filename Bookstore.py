@@ -34,76 +34,78 @@ class Ui_MainWindow(object):
                 self.textBrowser.setMaximumSize(QtCore.QSize(491, 51))
                 self.textBrowser.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.textBrowser.setObjectName("textBrowser")
+                
                 self.bookstorebutton = QtWidgets.QPushButton(self.centralwidget)
                 self.bookstorebutton.setGeometry(QtCore.QRect(60, 200, 201, 61))
                 self.bookstorebutton.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton.setObjectName("bookstorebutton")
+                
                 self.orderButton = QtWidgets.QPushButton(self.centralwidget)
                 self.orderButton.setGeometry(QtCore.QRect(60, 280, 201, 61))
                 self.orderButton.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.orderButton.setObjectName("orderButton")
                 self.orderButton.clicked.connect(self.showOrder)
+                
                 self.abouusButton = QtWidgets.QPushButton(self.centralwidget)
                 self.abouusButton.setGeometry(QtCore.QRect(60, 360, 201, 61))
                 self.abouusButton.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "\n"
         "font: 75 16pt \"Nirmala UI\";")
                 self.abouusButton.setObjectName("abouusButton")
+                
                 self.bookstorebutton_2 = QtWidgets.QPushButton(self.centralwidget)
                 self.bookstorebutton_2.setGeometry(QtCore.QRect(60, 120, 201, 61))
                 self.bookstorebutton_2.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton_2.setObjectName("bookstorebutton_2")
+                
                 self.frameBookstore = QtWidgets.QFrame(self.centralwidget)
                 self.frameBookstore.setGeometry(QtCore.QRect(280, 110, 811, 423))
                 self.frameBookstore.setMinimumSize(QtCore.QSize(811, 421))
                 self.frameBookstore.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 self.frameBookstore.setFrameShadow(QtWidgets.QFrame.Raised)
                 self.frameBookstore.setObjectName("frameBookstore")
+                
                 self.horizontalLayout = QtWidgets.QHBoxLayout(self.frameBookstore)
                 self.horizontalLayout.setObjectName("horizontalLayout")
+                
                 self.widget = QtWidgets.QWidget(self.frameBookstore)
                 self.widget.setMinimumSize(QtCore.QSize(297, 401))
                 self.widget.setMaximumSize(QtCore.QSize(297, 401))
                 self.widget.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.widget.setObjectName("widget")
+                
                 self.comboBox = QtWidgets.QComboBox(self.widget)
                 self.comboBox.setGeometry(QtCore.QRect(10, 70, 281, 29))
                 self.comboBox.setStyleSheet("font: 12pt \"Nirmala UI\";")
-
-
-
-                
                 self.comboBox.setObjectName("comboBox")
                 self.ShowNameBook()
                 self.comboBox.currentIndexChanged.connect(self.ShowDetail)
                 
-
                 self.label_6 = QtWidgets.QLabel(self.widget)
                 self.label_6.setGeometry(QtCore.QRect(10, 20, 277, 32))
                 self.label_6.setMinimumSize(QtCore.QSize(277, 30))
                 self.label_6.setStyleSheet("font: 16pt \"Nirmala UI\";")
                 self.label_6.setObjectName("label_6")
                 self.horizontalLayout.addWidget(self.widget)
+                
                 self.widget_2 = QtWidgets.QWidget(self.frameBookstore)
                 self.widget_2.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.widget_2.setObjectName("widget_2")
+                
                 self.label_7 = QtWidgets.QLabel(self.widget_2)
                 self.label_7.setGeometry(QtCore.QRect(140, 10, 211, 30))
                 self.label_7.setStyleSheet("font: 16pt \"Nirmala UI\";")
                 self.label_7.setObjectName("label_7")
+                
                 self.bookstorebutton_3 = QtWidgets.QPushButton(self.widget_2)
                 self.bookstorebutton_3.setGeometry(QtCore.QRect(170, 360, 151, 31))
                 self.bookstorebutton_3.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 12pt \"Nirmala UI\";")
                 self.bookstorebutton_3.setObjectName("bookstorebutton_3")
-
-
                 self.bookstorebutton_3.clicked.connect(self.addOrder)
-
-
 
                 self.plainTextEdit = QtWidgets.QPlainTextEdit(self.widget_2)
                 self.plainTextEdit.setGeometry(QtCore.QRect(40, 50, 421, 231))
@@ -116,17 +118,21 @@ class Ui_MainWindow(object):
                 self.frameBookstore_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 self.frameBookstore_2.setFrameShadow(QtWidgets.QFrame.Raised)
                 self.frameBookstore_2.setObjectName("frameBookstore_2")
+                
                 self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.frameBookstore_2)
                 self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+                
                 self.widget_5 = QtWidgets.QWidget(self.frameBookstore_2)
                 self.widget_5.setMinimumSize(QtCore.QSize(297, 401))
                 self.widget_5.setMaximumSize(QtCore.QSize(297, 401))
                 self.widget_5.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.widget_5.setObjectName("widget_5")
+                
                 self.label = QtWidgets.QLabel(self.widget_5)
                 self.label.setGeometry(QtCore.QRect(60, 300, 201, 61))
                 self.label.setText("")
                 self.label.setObjectName("label")
+                
                 self.widget_7 = QtWidgets.QWidget(self.widget_5)
                 self.widget_7.setGeometry(QtCore.QRect(30, 20, 250, 250))
                 self.widget_7.setMinimumSize(QtCore.QSize(250, 250))
@@ -134,22 +140,27 @@ class Ui_MainWindow(object):
                 self.widget_7.setStyleSheet("\n"
         "background-image: url(:/logo/pream.png);")
                 self.widget_7.setObjectName("widget_7")
+                
                 self.horizontalLayout_3.addWidget(self.widget_5)
                 self.widget_6 = QtWidgets.QWidget(self.frameBookstore_2)
                 self.widget_6.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.widget_6.setObjectName("widget_6")
                 self.horizontalLayout_3.addWidget(self.widget_6)
+                
                 self.frameBookstore_3 = QtWidgets.QFrame(self.centralwidget)
                 self.frameBookstore_3.setGeometry(QtCore.QRect(280, 110, 811, 423))
                 self.frameBookstore_3.setMinimumSize(QtCore.QSize(811, 421))
                 self.frameBookstore_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
                 self.frameBookstore_3.setFrameShadow(QtWidgets.QFrame.Raised)
                 self.frameBookstore_3.setObjectName("frameBookstore_3")
+                
                 self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frameBookstore_3)
                 self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+                
                 self.widget_4 = QtWidgets.QWidget(self.frameBookstore_3)
                 self.widget_4.setStyleSheet("background-image: url(:/BG/W.png);")
                 self.widget_4.setObjectName("widget_4")
+                
                 self.label_9 = QtWidgets.QLabel(self.widget_4)
                 self.label_9.setGeometry(QtCore.QRect(290, 20, 201, 61))
                 self.label_9.setStyleSheet("font: 75 25pt \"MS Shell Dlg 2\";")
@@ -189,8 +200,6 @@ class Ui_MainWindow(object):
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton_4.setObjectName("bookstorebutton_4")
                 self.bookstorebutton_4.clicked.connect(self.buy)
-               
-
                 self.label_3 = QtWidgets.QLabel(self.widget_10)
                 self.label_3.setGeometry(QtCore.QRect(180, 20, 191, 41))
                 self.label_3.setStyleSheet("font: 75 16pt \"MS Shell Dlg 2\";\n"
@@ -199,10 +208,10 @@ class Ui_MainWindow(object):
                 self.widget_3 = QtWidgets.QWidget(self.widget_10)
                 self.widget_3.setGeometry(QtCore.QRect(370, 210, 120, 80))
                 self.widget_3.setObjectName("widget_3")
+                
                 self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.widget_10)
                 self.plainTextEdit_2.setGeometry(QtCore.QRect(30, 70, 491, 311))
                 self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-
 
                 self.label_price = QtWidgets.QLabel(self.widget_10)
                 self.label_price.setGeometry(QtCore.QRect(650, 80, 51, 41))
@@ -210,13 +219,11 @@ class Ui_MainWindow(object):
         "background-image: url(:/BG/W.png);")
                 self.label_price.setObjectName("label_price")
 
-
                 self.label_8 = QtWidgets.QLabel(self.widget_10)
                 self.label_8.setGeometry(QtCore.QRect(700, 80, 51, 41))
                 self.label_8.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
         "background-image: url(:/BG/W.png);")
                 self.label_8.setObjectName("label_8")
-
 
                 self.bookstorebutton_5 = QtWidgets.QPushButton(self.widget_10)
                 self.bookstorebutton_5.setGeometry(QtCore.QRect(560, 270, 191, 40))
