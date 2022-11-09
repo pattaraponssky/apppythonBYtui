@@ -362,7 +362,7 @@ class Ui_MainWindow(object):
   
         def clear(self):
                 OrderList.clear()
-                self.showOrder
+                self.showOrder()
 
 
         def buy(self):
