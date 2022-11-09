@@ -42,6 +42,9 @@ class Ui_MainWindow(object):
                 self.orderButton.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.orderButton.setObjectName("orderButton")
+
+
+                self.orderButton.clicked.connect(self.showOrder)
                 self.abouusButton = QtWidgets.QPushButton(self.centralwidget)
                 self.abouusButton.setGeometry(QtCore.QRect(60, 360, 201, 61))
                 self.abouusButton.setStyleSheet("background-image: url(:/BG/W.png);\n"
@@ -77,9 +80,6 @@ class Ui_MainWindow(object):
                 self.ShowNameBook()
                 self.comboBox.currentIndexChanged.connect(self.ShowDetail)
                 
-
-
-
 
                 self.label_6 = QtWidgets.QLabel(self.widget)
                 self.label_6.setGeometry(QtCore.QRect(10, 20, 277, 32))
@@ -188,6 +188,8 @@ class Ui_MainWindow(object):
                 self.bookstorebutton_4.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton_4.setObjectName("bookstorebutton_4")
+                self.bookstorebutton_4.clicked.connect(self.buy)
+
                 self.label_3 = QtWidgets.QLabel(self.widget_10)
                 self.label_3.setGeometry(QtCore.QRect(180, 20, 191, 41))
                 self.label_3.setStyleSheet("font: 75 16pt \"MS Shell Dlg 2\";\n"
@@ -199,17 +201,33 @@ class Ui_MainWindow(object):
                 self.plainTextEdit_2 = QtWidgets.QPlainTextEdit(self.widget_10)
                 self.plainTextEdit_2.setGeometry(QtCore.QRect(30, 70, 491, 311))
                 self.plainTextEdit_2.setObjectName("plainTextEdit_2")
-        
+
+
+                self.label_price = QtWidgets.QLabel(self.widget_10)
+                self.label_price.setGeometry(QtCore.QRect(650, 80, 51, 41))
+                self.label_price.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
+        "background-image: url(:/BG/W.png);")
+                self.label_price.setObjectName("label_price")
+
+
                 self.label_8 = QtWidgets.QLabel(self.widget_10)
-                self.label_8.setGeometry(QtCore.QRect(720, 80, 51, 41))
+                self.label_8.setGeometry(QtCore.QRect(700, 80, 51, 41))
                 self.label_8.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";\n"
         "background-image: url(:/BG/W.png);")
                 self.label_8.setObjectName("label_8")
+
+
+
+
+
                 self.bookstorebutton_5 = QtWidgets.QPushButton(self.widget_10)
                 self.bookstorebutton_5.setGeometry(QtCore.QRect(560, 270, 191, 40))
                 self.bookstorebutton_5.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton_5.setObjectName("bookstorebutton_5")
+                self.bookstorebutton_5.clicked.connect(self.clear)
+
+
                 self.horizontalLayout_4.addWidget(self.widget_10)
                 self.frameBookstore_3.raise_()
                 self.frameBookstore_2.raise_()
@@ -263,10 +281,42 @@ class Ui_MainWindow(object):
                 self.orderButton.clicked.connect(self.frameBookstore_3.close) # type: ignore
                 self.orderButton.clicked.connect(self.frameBookstore.close) # type: ignore
                 QtCore.QMetaObject.connectSlotsByName(MainWindow)
-                
+        
+        def retranslateUi(self, MainWindow):
+                _translate = QtCore.QCoreApplication.translate
+                MainWindow.setWindowTitle(_translate("MainWindow", "โปรแกรมซื้อหนังสือ"))
+                self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+        "p, li { white-space: pre-wrap; }\n"
+        "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
+        "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; font-weight:600;\">PHOENIX DREAM BOOK</span></p></body></html>"))
+                self.bookstorebutton.setText(_translate("MainWindow", "BOOKSTORE"))
+                self.orderButton.setText(_translate("MainWindow", "ORDER"))
+                self.abouusButton.setText(_translate("MainWindow", "ABout Us"))
+                self.bookstorebutton_2.setText(_translate("MainWindow", "HOME"))
+                self.label_6.setText(_translate("MainWindow", "          รายการหนังสือ"))
+                self.label_7.setText(_translate("MainWindow", " รายละเอียดหนังสือ"))
+                self.bookstorebutton_3.setText(_translate("MainWindow", "Add To Order"))
+
+                self.label_9.setText(_translate("MainWindow", "    ผู้จัดทำ"))
+                self.label_10.setText(_translate("MainWindow", " นายภัทรพล สมสกุล 116310400294-9"))
+                self.label_11.setText(_translate("MainWindow", " นายกรกฤตย ก๋ำนารายณ์ 116310462007-0"))
+                self.label_12.setText(_translate("MainWindow", "63146CPE2"))
+                self.label_2.setText(_translate("MainWindow", "  Total Price"))
+                self.bookstorebutton_4.setText(_translate("MainWindow", "Buy"))
+                self.label_3.setText(_translate("MainWindow", "     Order List"))
+                self.label_8.setText(_translate("MainWindow", " Bath"))
+                self.label_price.setText(_translate("MainWindow", "0"))
+
+                self.bookstorebutton_5.setText(_translate("MainWindow", "clear order"))
+                self.menuHome.setTitle(_translate("MainWindow", "HOME"))
+                self.menuAbout_Us.setTitle(_translate("MainWindow", "About Us"))
+                self.menuBookstore.setTitle(_translate("MainWindow", "BOOKSTORE"))
+                self.menuORDER.setTitle(_translate("MainWindow", "ORDER"))
+                self.action.setText(_translate("MainWindow", "รายการหนังสือ"))
+                self.action_3.setText(_translate("MainWindow", "รายการสั่งซื้อ"))
 
 
-                
         def ShowDetail(self) :
                         self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
                         self.cur = self.db.cursor()
@@ -293,49 +343,31 @@ class Ui_MainWindow(object):
                 data = self.comboBox.currentText()
                 self.cur.execute(f'SELECT * FROM book WHERE name_book = "{data}";')
                 data = self.cur.fetchall()
-
+                
                 for i in data:
-                        OrderList.append(i[0])
-                        print(OrderList)
+                        OrderList.append(i)
 
-                        
+        def showOrder (self):
+                price = 0
+                self.plainTextEdit_2.clear()
+               
+                self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
+                self.cur = self.db.cursor()
                 
-                
-                        
+                self.plainTextEdit_2.insertPlainText(f"name :                                                        price :\n")
+                for i in OrderList:
+                        self.plainTextEdit_2.insertPlainText(f"{i[0]}                                                     {i[2]}\n")
+                        price = price + i[2]
+                self.label_price.setText(f'{price}')
+  
+        def clear(self):
+                OrderList.clear()
+                self.showOrder
 
 
+        def buy(self):
+                print('test')
 
-        def retranslateUi(self, MainWindow):
-                _translate = QtCore.QCoreApplication.translate
-                MainWindow.setWindowTitle(_translate("MainWindow", "โปรแกรมซื้อหนังสือ"))
-                self.textBrowser.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-        "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-        "p, li { white-space: pre-wrap; }\n"
-        "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.85455pt; font-weight:400; font-style:normal;\">\n"
-        "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:22pt; font-weight:600;\">PHOENIX DREAM BOOK</span></p></body></html>"))
-                self.bookstorebutton.setText(_translate("MainWindow", "BOOKSTORE"))
-                self.orderButton.setText(_translate("MainWindow", "ORDER"))
-                self.abouusButton.setText(_translate("MainWindow", "ABout Us"))
-                self.bookstorebutton_2.setText(_translate("MainWindow", "HOME"))
-                self.label_6.setText(_translate("MainWindow", "          รายการหนังสือ"))
-                self.label_7.setText(_translate("MainWindow", " รายละเอียดหนังสือ"))
-                self.bookstorebutton_3.setText(_translate("MainWindow", "Add To Order"))
-
-                self.label_9.setText(_translate("MainWindow", "    ผู้จัดทำ"))
-                self.label_10.setText(_translate("MainWindow", " นายภัทรพล สมสกุล 116310400294-9"))
-                self.label_11.setText(_translate("MainWindow", " นายกรกฤตย ก๋ำนารายณ์ 116310462007-0"))
-                self.label_12.setText(_translate("MainWindow", "63146CPE2"))
-                self.label_2.setText(_translate("MainWindow", "  Total Price"))
-                self.bookstorebutton_4.setText(_translate("MainWindow", "Buy"))
-                self.label_3.setText(_translate("MainWindow", "     Order List"))
-                self.label_8.setText(_translate("MainWindow", " Bath"))
-                self.bookstorebutton_5.setText(_translate("MainWindow", "clear order"))
-                self.menuHome.setTitle(_translate("MainWindow", "HOME"))
-                self.menuAbout_Us.setTitle(_translate("MainWindow", "About Us"))
-                self.menuBookstore.setTitle(_translate("MainWindow", "BOOKSTORE"))
-                self.menuORDER.setTitle(_translate("MainWindow", "ORDER"))
-                self.action.setText(_translate("MainWindow", "รายการหนังสือ"))
-                self.action_3.setText(_translate("MainWindow", "รายการสั่งซื้อ"))
         import Image_rc
 
        
