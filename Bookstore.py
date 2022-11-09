@@ -9,12 +9,14 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 import pymysql
+import random
 
 OrderList = []
 
-class Ui_MainWindow(object):
 
+class Ui_MainWindow(object):
 
 
 
@@ -42,8 +44,6 @@ class Ui_MainWindow(object):
                 self.orderButton.setStyleSheet("background-image: url(:/BG/W.png);\n"
         "font: 16pt \"Nirmala UI\";")
                 self.orderButton.setObjectName("orderButton")
-
-
                 self.orderButton.clicked.connect(self.showOrder)
                 self.abouusButton = QtWidgets.QPushButton(self.centralwidget)
                 self.abouusButton.setGeometry(QtCore.QRect(60, 360, 201, 61))
@@ -189,6 +189,7 @@ class Ui_MainWindow(object):
         "font: 16pt \"Nirmala UI\";")
                 self.bookstorebutton_4.setObjectName("bookstorebutton_4")
                 self.bookstorebutton_4.clicked.connect(self.buy)
+               
 
                 self.label_3 = QtWidgets.QLabel(self.widget_10)
                 self.label_3.setGeometry(QtCore.QRect(180, 20, 191, 41))
@@ -217,9 +218,6 @@ class Ui_MainWindow(object):
                 self.label_8.setObjectName("label_8")
 
 
-
-
-
                 self.bookstorebutton_5 = QtWidgets.QPushButton(self.widget_10)
                 self.bookstorebutton_5.setGeometry(QtCore.QRect(560, 270, 191, 40))
                 self.bookstorebutton_5.setStyleSheet("background-image: url(:/BG/W.png);\n"
@@ -239,30 +237,7 @@ class Ui_MainWindow(object):
                 self.abouusButton.raise_()
                 self.bookstorebutton_2.raise_()
                 MainWindow.setCentralWidget(self.centralwidget)
-                self.menubar = QtWidgets.QMenuBar(MainWindow)
-                self.menubar.setGeometry(QtCore.QRect(0, 0, 1130, 25))
-                self.menubar.setObjectName("menubar")
-                self.menuHome = QtWidgets.QMenu(self.menubar)
-                self.menuHome.setObjectName("menuHome")
-                self.menuAbout_Us = QtWidgets.QMenu(self.menubar)
-                self.menuAbout_Us.setObjectName("menuAbout_Us")
-                self.menuBookstore = QtWidgets.QMenu(self.menubar)
-                self.menuBookstore.setObjectName("menuBookstore")
-                self.menuORDER = QtWidgets.QMenu(self.menubar)
-                self.menuORDER.setObjectName("menuORDER")
-                MainWindow.setMenuBar(self.menubar)
-                self.statusbar = QtWidgets.QStatusBar(MainWindow)
-                self.statusbar.setObjectName("statusbar")
-                MainWindow.setStatusBar(self.statusbar)
-                self.action = QtWidgets.QAction(MainWindow)
-                self.action.setObjectName("action")
-                self.action_3 = QtWidgets.QAction(MainWindow)
-                self.action_3.setObjectName("action_3")
-                self.menubar.addAction(self.menuHome.menuAction())
-                self.menubar.addAction(self.menuBookstore.menuAction())
-                self.menubar.addAction(self.menuORDER.menuAction())
-                self.menubar.addAction(self.menuAbout_Us.menuAction())
-
+                
                 self.retranslateUi(MainWindow)
                 self.bookstorebutton.clicked.connect(self.frameBookstore.show) # type: ignore
                 self.bookstorebutton_2.clicked.connect(self.frameBookstore_2.show) # type: ignore
@@ -309,14 +284,8 @@ class Ui_MainWindow(object):
                 self.label_price.setText(_translate("MainWindow", "0"))
 
                 self.bookstorebutton_5.setText(_translate("MainWindow", "clear order"))
-                self.menuHome.setTitle(_translate("MainWindow", "HOME"))
-                self.menuAbout_Us.setTitle(_translate("MainWindow", "About Us"))
-                self.menuBookstore.setTitle(_translate("MainWindow", "BOOKSTORE"))
-                self.menuORDER.setTitle(_translate("MainWindow", "ORDER"))
-                self.action.setText(_translate("MainWindow", "รายการหนังสือ"))
-                self.action_3.setText(_translate("MainWindow", "รายการสั่งซื้อ"))
-
-
+                
+  
         def ShowDetail(self) :
                         self.db = pymysql.connect(host="127.0.0.1", database="bookstore", user="root", password="1234", charset="utf8")
                         self.cur = self.db.cursor()
@@ -362,16 +331,23 @@ class Ui_MainWindow(object):
   
         def clear(self):
                 OrderList.clear()
-                self.showOrder
+                self.showOrder()
 
 
         def buy(self):
-                print('test')
-
+                numRandom = ""
+                for i in range(0,5):
+                 num = random.random()
+                 i = random.randint(0,9)
+                 x = str(i)
+                 numRandom = numRandom + x
+                 
+                orderBox = QMessageBox
+                orderBox.about(MainWindow, "Order Number",f'             PN{numRandom}               ')
+        
         import Image_rc
 
-       
-
+   
 if __name__ == "__main__":
     import sys
 
